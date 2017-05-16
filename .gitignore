@@ -16,3 +16,4 @@ Thumbs.db
 *.cljs
 assets/js/cljs_next
 \#*\#
+.#*
