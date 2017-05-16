@@ -1,6 +1,6 @@
 ---
 layout: page
-title: dosync
+title: jborden
 tagline: Lisp, Logic & JavaScript
 ---
 {% include JB/setup %}
