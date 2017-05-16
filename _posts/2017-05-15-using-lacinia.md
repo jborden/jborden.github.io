@@ -67,6 +67,7 @@ Documentation for the Game object would appear in the GraphiQL tool like this:
 ![Game documentation](/assets/images/graphql-game-documentation.png)
 
 The 'created' field provides more information. Its documentation looks like this in GraphiQL
+
 ![created field documentation](/assets/images/graphql-game-created-documentation.png)
 
 A Game object can be accessed via the following query:
@@ -189,6 +190,7 @@ Here is the main web app handler through which requests are passed:
 ```
 
 The handler function function looks like this:
+
 ```clojure
 (defn handler [request]
   (let [uri (:uri request)]
