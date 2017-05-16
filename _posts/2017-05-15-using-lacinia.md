@@ -2,6 +2,7 @@
 layout: post
 title: "Using the Lacinia GraphQL Clojure Library"
 description: ""
+comments: true
 category: 
 tags: [lacinia, GraphQL]
 ---
