@@ -315,6 +315,3 @@ In combination with a library such as Yesql, an API can be designed side-by-side
 Lacinia documentation can be found [here](http://lacinia.readthedocs.io/en/latest/overview.html).
 
 All code for the Leaderboard API can be found [here](https://github.com/jborden/leaderboard-api/tree/blog_post).
-
-
-
