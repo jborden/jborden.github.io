@@ -4,7 +4,6 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>{{ page.title }}</title>
         <meta name="author" content="{{ site.author.name }}" />
-        <link href="http://swannodette.github.com/atom.xml" rel="alternate" title="dosync" type="application/atom+xml" />
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 
         <!-- syntax highlighting CSS -->
@@ -22,7 +21,8 @@
             }
           });
         </script>
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         
         <!-- Typekit -->
         <!--
@@ -45,20 +45,14 @@
             {{ content }}
             
             <div class="footer">
-                <div class="contact">
-                    <p>
-                        <!--
-                        {{ site.author.name }}<br />
-                        {{ site.tagline }}<br />
-                        -->
-                        <a href="http://swannodette.github.com/atom.xml">RSS</a>
-                        <a href='mailto:{{ site.author.email }}'>{{ site.author.email }}</a>
-                    </p>
-                </div>
-                <div class="contact">
-                    <p>
+              <div class="contact">
+		<p>
+		  <a href="http://jborden.github.io/atom.xml">RSS</a>
+		</p>
+	      </div>
+	      <div class="contact">
+                  <p>
                         <a href="http://github.com/{{ site.author.github }}/">github.com/{{ site.author.github }}</a><br />
-                        <a href="http://twitter.com/{{ site.author.twitter }}/">twitter.com/{{ site.author.twitter }}</a><br />
                     </p>
                 </div>
             </div>
