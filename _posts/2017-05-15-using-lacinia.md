@@ -203,6 +203,9 @@ The handler function function looks like this:
        :headers {"Content-Type" "text/html"}
        :body (str "Only GraphQL JSON requests to /graphql are accepted on this server")})))
 ```
+
+***edit***: *As pointed out in the comment section below, the schema is being recompiled for each request by a call to **leaderboard-schema**. In development, this allows modifications to be made to the schema edn and be instantly reflected in new requests. However, recompiling the schema for each request has performance implications in production.*
+
 The **handler** fn filters out all requests, except those made to the /graphql URI.
 
 The **wrap-cors** middleware responds to a browser's OPTIONS request and returns a simple ACCESS CONTROL ALLOW ORIGIN header which allows requests to the server from any domain. This enables a web game to access the Leaderboard API service through XHR requests. The security implications of this are worth discussing, but are outside of the scope of this article.
@@ -240,6 +243,9 @@ With some of the details of handling requests out of the way, the real work is l
          :headers {"Content-Type" "application/json"}
          :body (json/write-str result)}))))
 ```
+
+***edit***: *In this case, the "cache" is of limited use as it is being reset on each request. It only provides the authorization key to the data resolvers that require it. See the  [boardgamegeek-graphql-proxy](https://github.com/hlship/boardgamegeek-graphql-proxy/tree/master/src/bgg_graphql_proxy) repository for an example of in-memory caching.*
+
 
 The vars and query are extracted from the request, the result is computed by the lacinia **execute** fn using the schema and returned as a JSON response. The code for **extract-map** looks like this:
 
