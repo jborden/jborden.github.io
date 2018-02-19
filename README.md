@@ -5,3 +5,15 @@ This blog has been forked from [swannodette](https://github.com/swannodette/swan
 # Writing Resources
 
 https://stackedit.io/editor is great for writing
+
+# Images and Assets
+
+assets/ dir contains asset files
+
+# Drafts
+
+_drafts folder contains work we have done, but are not publishing
+
+# Local Hosting
+
+$ jekyll serve
